@@ -1,43 +1,37 @@
 package org.fasttrackit.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
-import org.fasttrackit.pages.AccountPage;
+import net.thucydides.core.annotations.Steps;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.LoginPage;
+import org.fasttrackit.pages.ProductsPage;
 import org.junit.Assert;
 
-public class LoginSteps {
+public class ProductsSteps {
 
     private HomePage homePage;
     private LoginPage loginPage;
-    private AccountPage accountPage;
+    private ProductsPage productsPage;
 
     @Step
-    public void navigateToHomepage() {
+    public void logIntoAccount(String email, String pass) {
         homePage.open();
-    }
-
-    @Step
-    public void goToLogin() {
         homePage.clickAccountLink();
         homePage.clickLoginLink();
-    }
-
-    @Step
-    public void enterCredentials(String email, String pass) {
         loginPage.setEmailField(email);
         loginPage.setPassField(pass);
-    }
-
-    @Step
-    public void clickLogin() {
         loginPage.clickLoginButton();
     }
 
     @Step
-    public void checkLoggedIn(String user) {
-        Assert.assertTrue(accountPage.checkHelloText(user));
-
+    public void  goToSale() {
+        productsPage.clickSaleTab();
     }
+
+    @Step
+    public void checkSalePage() {
+        productsPage.checkSalePage();
+    }
+
 
 }
