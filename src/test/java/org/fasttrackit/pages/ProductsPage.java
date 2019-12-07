@@ -34,7 +34,7 @@ public class ProductsPage extends PageObject {
     @FindBy(css = ".cart-link")
     private WebElementFacade cart;
 
-    @FindBy(css = "body > div > div.page > div.main-container.col1-layout > div > div > div.cart.display-single-price > ul > li > ul > li > span")
+    @FindBy(css = "li.success-msg span:first-of-type")
     private WebElementFacade productInCart;
 
     public void clickSaleTab() {
