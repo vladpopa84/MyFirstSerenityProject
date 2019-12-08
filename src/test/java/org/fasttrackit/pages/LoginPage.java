@@ -17,15 +17,19 @@ public class LoginPage extends PageObject {
     @FindBy(css="#send2")
     private WebElementFacade loginButton;
 
+
     public void setEmailField(String email) {
+
         typeInto(emailField, email);
     }
 
     public void setPassField(String pass) {
+
         typeInto(passField, pass);
     }
 
     public void clickLoginButton() {
+
         clickOn(loginButton);
     }
 
