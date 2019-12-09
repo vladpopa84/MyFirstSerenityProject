@@ -42,6 +42,7 @@ public class ProductsPage extends PageObject {
     }
 
     public void checkSalePage() {
+
         Assert.assertEquals(salePageMessage.getText(), "SALE");
     }
 

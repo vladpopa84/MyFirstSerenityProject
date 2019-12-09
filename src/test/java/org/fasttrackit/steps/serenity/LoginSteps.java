@@ -14,6 +14,7 @@ public class LoginSteps {
 
     @Step
     public void navigateToHomepage() {
+
         homePage.open();
     }
 
